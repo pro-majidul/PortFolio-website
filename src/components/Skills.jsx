@@ -2,6 +2,7 @@ import React from 'react';
 import { FaCss3Alt, FaGit, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact } from 'react-icons/fa';
 import { SiFirebase, SiMongodb, SiTailwindcss } from 'react-icons/si';
 import { motion } from 'framer-motion';
+import { VscVscode } from "react-icons/vsc";
 
 
 const Skills = () => {
@@ -21,13 +22,13 @@ const Skills = () => {
         Tools: [
             { name: "Git", icon: <FaGit size={24} className="text-red-500" />, percentage: 80 },
             { name: "GitHub", icon: <FaGithub size={24} className="text-gray-800" />, percentage: 85 },
-            { name: "VS Code", icon: <FaReact size={24} className="text-blue-600" />, percentage: 90 },
+            { name: "VS Code", icon: <VscVscode size={24} className="text-blue-600" />, percentage: 90 },
         ],
     };
 
     return (
         <section id="skills" className="py-16 bg-[#070D1B]">
-            <h2 className="text-2xl text-center md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">My Skills</h2>
+            <h2 className="text-2xl text-center underline underline-offset-8 decoration-orange-400 md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">My Skills</h2>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"

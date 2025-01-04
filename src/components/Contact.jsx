@@ -33,8 +33,8 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <form noValidate="" className="container w-full max-w-xl p-8 mx-auto space-y-6 rounded-md shadow ">
-                    <p>Send me A message</p>
+                <form noValidate="" className="container w-full max-w-xl md:p-8 mx-auto space-y-6 rounded-md shadow ">
+                    <p className="text-4xl font-bold">Send me A message</p>
                     <div>
                         <label htmlFor="name" className="block mb-1 ml-1">Name</label>
                         <input id="name" type="text" placeholder="Your name" required="" className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624]" />
