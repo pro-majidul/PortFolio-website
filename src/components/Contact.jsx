@@ -1,5 +1,5 @@
 
-import { FaLocationDot } from 'react-icons/fa6';
+import { FaLocationDot, FaWhatsapp } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { TbPhoneCall } from 'react-icons/tb';
 import { useRef } from 'react';
@@ -48,13 +48,26 @@ const Contact = () => {
                         <div className="flex items-center gap-3">
                             <p className='border p-3 rounded-full hover:border-orange-400'>
 
+                                <FaWhatsapp size={16} />
+                            </p>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://wa.me/8801746637704" className='text-gray-400 text-xl hover:text-orange-300'> 01746637704</a>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <p className='border p-3 rounded-full hover:border-orange-400'>
+
                                 <TbPhoneCall size={16} />
                             </p>
-                            <span className='text-gray-400 text-xl hover:text-orange-300'>+08 01746637704</span>
+                            <a href="tel:+8801746637704" className='text-gray-400 text-xl hover:text-orange-300'>+08 01746637704</a>
                         </div>
                         <div className="flex items-center gap-3">
                             <p className='border p-3 rounded-full hover:border-orange-400'> <MdEmail size={16} /></p>
-                            <span className='text-gray-400 text-xl hover:text-orange-300'>majidul123tub@gamil.com</span>
+                            <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href="https://mail.google.com/mail/?view=cm&fs=1&to=majidul123tub@gmail.com" className='text-gray-400 text-xl hover:text-orange-300'>majidul123tub@gamil.com</a>
                         </div>
                     </div>
                 </div>
