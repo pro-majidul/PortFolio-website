@@ -3,11 +3,11 @@ import logo from '../assets/logo.png';
 const Navbar = () => {
     const navOptions = (
         <>
-            <li><a href="#home" className='text-xl hover:text-orange-300' smooth={true} duration={500}>Home</a></li>
-            <li><a href="#about" className='text-xl hover:text-orange-300' smooth={true} duration={500}>About</a></li>
-            <li><a href="#projects" className='text-xl hover:text-orange-300' smooth={true} duration={500}>Projects</a></li>
-            <li><a href="#skills" className='text-xl hover:text-orange-300' smooth={true} duration={500}>Skills</a></li>
-            <li><a href="#contact" className='text-xl hover:text-orange-300' smooth={true} duration={500}>Contact</a></li>
+            <li><a href="#home" className='text-xl hover:text-orange-300' duration={500}>Home</a></li>
+            <li><a href="#about" className='text-xl hover:text-orange-300' duration={500}>About</a></li>
+            <li><a href="#projects" className='text-xl hover:text-orange-300' duration={500}>Projects</a></li>
+            <li><a href="#skills" className='text-xl hover:text-orange-300' duration={500}>Skills</a></li>
+            <li><a href="#contact" className='text-xl hover:text-orange-300' duration={500}>Contact</a></li>
         </>
     );
 
@@ -46,7 +46,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a href='' className='px-6 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer'> Resume</a>
+                <a target='_blank' href='https://drive.google.com/file/d/15bm5aYJlFJaA3fCQStG1zTHC1pKSK_bRsk_Ba-GeNzc/preview' className='px-6 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer'> Resume</a>
             </div>
         </div>
     );

@@ -69,7 +69,8 @@ const Banner = () => {
                                 <a href='https://github.com/pro-majidul' target="_blank"
                                     rel="noopener noreferrer" className='border p-2 rounded-full bg-black bg-gradient-to-r hover:from-purple-600 hover:to-blue-500'>  <FaGithub size={24} /></a>
                             </div>
-                            <a download href='' className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer">DownLoad Resume</a>
+                            <a download 
+                             href='https://docs.google.com/document/d/15bm5aYJlFJaA3fCQStG1zTHC1pKSK_bRsk_Ba-GeNzc/export?format=pdf' className="px-6 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer">DownLoad Resume</a>
                         </div>
                     </div>
                 </div>
