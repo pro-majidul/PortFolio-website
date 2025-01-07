@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaCss3Alt, FaGit, FaGithub, FaHtml5, FaJs, FaNodeJs, FaReact } from 'react-icons/fa';
-import { SiFirebase, SiMongodb, SiTailwindcss } from 'react-icons/si';
+import { SiExpress, SiFirebase, SiMongodb, SiTailwindcss } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import { VscVscode } from "react-icons/vsc";
 
@@ -18,6 +18,7 @@ const Skills = () => {
             { name: "Node.js", icon: <FaNodeJs size={24} className="text-green-500" />, percentage: 75 },
             { name: "MongoDB", icon: <SiMongodb size={24} className="text-green-600" />, percentage: 70 },
             { name: "Firebase", icon: <SiFirebase size={24} className="text-yellow-500" />, percentage: 85 },
+            { name: "Express.JS", icon: <SiExpress size={24} className="text-yellow-500" />, percentage: 89 },
         ],
         Tools: [
             { name: "Git", icon: <FaGit size={24} className="text-red-500" />, percentage: 80 },
