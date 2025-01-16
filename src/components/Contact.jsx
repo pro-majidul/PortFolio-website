@@ -10,40 +10,41 @@ import { Fade } from 'react-awesome-reveal';
 
 const Contact = () => {
 
-    const form = useRef();
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        const formData = new FormData(form.current);
-        const fromName = formData.get('from_name');
-        const fromEmail = formData.get('from_email');
-        const message = formData.get('message');
 
-        const emailParams = {
-            from_name: fromName,
-            from_email: fromEmail,
-            message: message,
-            reply_to: fromEmail,  // reply to the sender's email
-            bcc_email: 'bcc@example.com', // BCC email address (update this with the actual BCC email)
-        };
+        const fromName = e.target.from_name.value;
+        const fromEmail = e.target.from_email.value;
+        const message = e.target.message.value;
+
+        const info = { from_name: fromName, from_email: fromEmail, message }
+
+
 
         emailjs
-            .sendForm('service_ggwkmsr', 'template_ud9cxne', form.current, {
-                publicKey: 'zTJh8Dk6Sk51W-Uy8',
-            })
+            .send('service_ggwkmsr', 'template_ud9cxne', info,
+                'zTJh8Dk6Sk51W-Uy8',
+            )
             .then(
                 () => {
                     console.log('SUCCESS!');
                     toast.success('Message Sent Successfully');
-                    form.current.reset();
+
+
+
+                    e.target.from_name.value = ''
+                    e.target.from_email.value = ''
+                    e.target.message.value = ''
                 },
                 (error) => {
-                    console.log('FAILED...', error.text);
-                    toast.error(`${error.text}`);
+                    console.log('FAILED...', error);
+                    toast.error(`${error}`);
                 }
             );
     };
+
 
     return (
         <section id='contact' className="py-6 bg-[#070D1B]">
@@ -89,7 +90,7 @@ const Contact = () => {
                 </Fade>
 
                 <Fade direction='right' triggerOnce>
-                    <form ref={form} onSubmit={sendEmail} className="container w-full max-w-xl md:p-8 mx-auto space-y-6 rounded-md shadow ">
+                    <form onSubmit={sendEmail} className="container w-full max-w-xl md:p-8 mx-auto space-y-6 rounded-md shadow ">
                         <p className="text-4xl font-bold">Send me A message</p>
                         <div>
                             <label className="block mb-1 ml-1">Name</label>
