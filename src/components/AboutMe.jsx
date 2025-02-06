@@ -6,7 +6,7 @@ const AboutMe = () => {
     return (
         <div id='about' className='px-3 md:px-10'>
             <Fade direction='left' triggerOnce>
-                <h2 className="text-2xl text-center underline underline-offset-8 decoration-orange-400 md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">About Me</h2>
+                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">About <span className='text-yellow-500'>Me</span></h2>
             </Fade>
             <div className=' md:my-5 md:py-5 lg:flex items-start justify-center gap-10 space-y-5'>
                 <Fade direction='left' triggerOnce>

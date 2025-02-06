@@ -24,8 +24,8 @@ const Education = () => {
                 animate="visible"
                 className="w-full mx-auto px-3 md:px-10 text-center"
             >
-                <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text underline underline-offset-8 decoration-orange-300">
-                    Educational Qualification
+                <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text ">
+                    Educational <span className="text-yellow-500">Qualification</span>
                 </h2>
                 <p className="mt-4 text-lg">
                     My academic background and educational journey.

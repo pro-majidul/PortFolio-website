@@ -29,7 +29,7 @@ const Skills = () => {
 
     return (
         <section id="skills" className="py-16 bg-[#070D1B]">
-            <h2 className="text-2xl text-center underline underline-offset-8 decoration-orange-400 md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">My Skills</h2>
+            <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">My <span className='text-yellow-500'>Skills</span></h2>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
