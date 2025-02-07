@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   {
     path: '/projects/:id',
     element: <Details></Details>,
-    loader: ({ params }) => fetch(`http://localhost:5000/projects/${params.id}`)
+    loader: ({ params }) => fetch(`https://portfolio-server-sage-rho.vercel.app/projects/${params.id}`)
   }
 ]);
 

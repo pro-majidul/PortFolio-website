@@ -65,9 +65,8 @@ const Details = () => {
                         </ul>
                         <p><span className=' text-yellow-300 md:text-3xl text-xl'>Contact Info</span></p>
                         <ul>
-                            <li>Email : <a href="">{data.contact_future_enhancements.contact_info.email}</a></li>
-                            <li>PortFolio : <a href="">{data.contact_future_enhancements.contact_info.portfolio}</a></li>
-                            <li>LinkedIn : <a href="">{data.contact_future_enhancements.contact_info.linkedin}</a></li>
+                            <li>Email : <a href={`mailto:${data.contact_future_enhancements.contact_info.email}`}>{data.contact_future_enhancements.contact_info.email}</a></li>
+                            <li>LinkedIn : <a href={data.contact_future_enhancements.contact_info.linkedin} target='_blank'>{data.contact_future_enhancements.contact_info.linkedin}</a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,9 +1,6 @@
-
-
 import { FaLocationDot, FaWhatsapp } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { TbPhoneCall } from 'react-icons/tb';
-import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 import { Fade } from 'react-awesome-reveal';
@@ -13,18 +10,12 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-
-
         const fromName = e.target.from_name.value;
         const fromEmail = e.target.from_email.value;
         const message = e.target.message.value;
-
         const info = { from_name: fromName, from_email: fromEmail, message }
-
-
-
         emailjs
-            .send('service_ggwkmsr', 'template_ud9cxne', info,
+            .send('service_cku3rvt', 'template_ud9cxne', info,
                 'zTJh8Dk6Sk51W-Uy8',
             )
             .then(
