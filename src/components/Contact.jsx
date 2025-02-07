@@ -85,15 +85,15 @@ const Contact = () => {
                         <p className="text-4xl font-bold">Send me A message</p>
                         <div>
                             <label className="block mb-1 ml-1">Name</label>
-                            <input type="text" name='from_name' placeholder="Your name" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624]" />
+                            <input type="text" name='from_name' placeholder="Your name" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624] text-gray-400"/>
                         </div>
                         <div>
                             <label className="block mb-1 ml-1">Email</label>
-                            <input name='from_email' type="email" placeholder="Your email" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624]" />
+                            <input name='from_email' type="email" placeholder="Your email" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624] text-gray-400" />
                         </div>
                         <div>
                             <label className="block mb-1 ml-1">Message</label>
-                            <textarea id="message" type="text" name='message' placeholder="Message..." className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624]"></textarea>
+                            <textarea id="message" type="text" name='message' placeholder="Message..." className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624] text-gray-400"></textarea>
                         </div>
                         <div>
                             <button type="submit" className='px-6 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer'>Send Message</button>

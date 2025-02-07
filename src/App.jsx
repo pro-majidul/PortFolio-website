@@ -32,7 +32,7 @@ function App() {
       <div className='md:my-10 md:py-10 my-3 py-3 max-w-7xl w-full mx-auto'>
         <Projects></Projects>
       </div>
-      <div className='md:my-10 md:py-10 my-3 py-3 max-w-7xl w-full mx-auto'>
+      <div className='md:mt-10 md:py-10 mt-3 py-3 max-w-7xl w-full mx-auto'>
         <Contact></Contact>
       </div>
 
