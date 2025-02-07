@@ -46,7 +46,10 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a target='_blank' href='https://drive.google.com/file/d/15bm5aYJlFJaA3fCQStG1zTHC1pKSK_bRsk_Ba-GeNzc/preview' className='px-6 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer'> Resume</a>
+                <a
+                    target='_blank'
+                    rel="noopener noreferrer"
+                    href='https://drive.google.com/file/d/1YE2hNdwK0gxCe8QF24qyJzw-h1zJArxT/preview' className='px-6 py-2 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer'> Resume</a>
             </div>
         </div>
     );
