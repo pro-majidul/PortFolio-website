@@ -16,14 +16,15 @@ const router = createBrowserRouter([
     element: <App></App>
   },
   {
-    path : '/details/:id',
-    element : <Details></Details>
+    path: '/projects/:id',
+    element: <Details></Details>,
+    loader: ({ params }) => fetch(`http://localhost:5000/projects/${params.id}`)
   }
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
     <Toaster />
   </StrictMode>,
 )

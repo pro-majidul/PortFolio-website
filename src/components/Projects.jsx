@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const Projects = () => {
     const [projects, setProjects] = useState([])
     useEffect(() => {
-        fetch('/projects.json')
+        fetch('http://localhost:5000/projects')
             .then(res => res.json())
             .then(data => setProjects(data))
     }, [])
@@ -35,7 +35,7 @@ const Projects = () => {
                                                 <h3 className="text-xl font-semibold text-black">{project.project_title}</h3>
 
                                                 <p className="leading-snug text-black">{project?.description?.slice(0, 120)}...</p>
-                                                <Link to={`/details/${project.id}`} className='flex items-center gap-1 md:w-5/12  w-6/12 bg-green-950 px-4 py-1 rounded-xl hover:bg-green-800'><span className='text-white'>View Details </span> <FaArrowRightLong className='text-yellow-400' /></Link>
+                                                <Link to={`/projects/${project._id}`} className='flex items-center gap-1 md:w-5/12  w-6/12 bg-green-950 px-4 py-1 rounded-xl hover:bg-green-800'><span className='text-white'>View Details </span> <FaArrowRightLong className='text-yellow-400' /></Link>
                                             </div>
                                         </div>
                                     </div>

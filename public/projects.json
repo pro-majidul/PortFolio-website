@@ -61,7 +61,7 @@
             ]
         },
         "project_links": {
-            "live_site": "[Your Live Link]",
+            "live_site": "",
             "frontend_repository": "[GitHub Client Repo]",
             "backend_repository": "[GitHub Server Repo]"
         },
