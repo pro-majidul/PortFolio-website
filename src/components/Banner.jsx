@@ -22,47 +22,54 @@ const Banner = () => {
                     <div className="md:flex md:flex-row-reverse py-20 justify-between items-center space-y-5 ">
                         {/* Right Side Image */}
 
-                        <div className="flex-1 ">
-
-                            <img
-                                src="https://i.ibb.co.com/Ct6rbQF/bg-image.png"
-                                alt="Profile"
-                                className="md:w-5/12 md:h-5/6 md:flex hidden absolute bottom-0 filter contrast-150 grayscale rounded-lg"
-                            />
+                        <div className="flex-1 w-full relative place-items-center">
+                            <div className="flex items-center justify-center">
+                                <div className="relative w-56 h-56 md:w-96 md:h-96">
+                                    {/* Outer Circle */}
+                                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500  via-green-400 via-yellow-400 via-orange-500 to-pink-500  p-2 animate-spin-slow">
+                                    </div>
+                                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                                        {/* Profile Image */}
+                                        <div className="relative w-52 h-52 md:w-80 md:h-80 bg-gradient-to-r from-blue-400 to-purple-500 overflow-hidden rounded-full ">
+                                            <img
+                                                src="https://i.ibb.co/vDG0t8q/bg-image.png"
+                                                alt="Profile"
+                                                className="w-full h-full object-cover rounded-full"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
 
 
                         {/* Left Side Content */}
                         <div className="flex-1 sapce-y-5 px-3 md:mt-10 md:pt-10">
-                            <p className="font-railwayfont text-xl text-orange-300">
-                                hello, I'm
+                            <p className="font-railwayfont md:text-4xl text-2xl uppercase text-orange-300 font-bold">
+                                hi! I'm
                             </p>
-                            <p className="text-4xl my-1 font-Cinzel font-bold text-white">
+                            <p className="md:text-4xl text-2xl uppercase font-bold mt-1 bg-gradient-to-r  from-blue-500 to-purple-600 font-Cinzel text-transparent bg-clip-text">
                                 Majidul Islam
                             </p>
-                            <p className='h-24 w-[300px] md:w-full'
+                            <p className='h-16 w-[300px] md:w-full'
                                 style={{
                                     color: textcolor,
                                 }}
-                            ><span className=' text-4xl mr-4'>I'm a</span>
+                            ><span className=' md:text-4xl text-2xl mr-4'>I'm a</span>
                                 <TypeAnimation
-                                    className='bg-gradient-to-r  from-blue-500 to-purple-600 font-Cinzel text-transparent bg-clip-text'
+                                    className="bg-gradient-to-r from-blue-500 to-purple-600 font-Cinzel text-transparent bg-clip-text text-2xl md:text-4xl "
                                     sequence={[
                                         'Web Developer',
                                         1000,
-
-                                        'UI/UX Designer',
-                                        2000,
                                         'Frontend Developer',
+                                        2000,
+                                        'MERN Stack Developer',
                                         () => console.log('Sequence completed'),
                                     ]}
                                     wrapper="span"
                                     cursor={true}
                                     repeat={Infinity}
-                                    style={{
-                                        fontSize: '2em',
-                                        display: 'inline-block'
-                                    }}
                                 />
                             </p>
                             <p className='text-slate-200 text-xl'>   I specialize in creating innovative web solutions with a focus on design, functionality, and user satisfaction. Bringing ideas to life with clean code and creative designs.</p>

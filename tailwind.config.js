@@ -10,6 +10,9 @@ export default {
         'railwayfont': "Raleway",
         'interfont': "Inter",
       },
+      animation: {
+        'spin-slow': 'spin 2s linear infinite',
+      },
     },
   },
   plugins: [
