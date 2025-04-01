@@ -3,7 +3,7 @@ import AboutMe from './components/AboutMe'
 import Banner from './components/Banner'
 import Contact from './components/Contact'
 import Education from './components/Education'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import Projects from './components/projects'
 import Skills from './components/Skills'
 
@@ -14,8 +14,8 @@ function App() {
 
   return (
     <section >
-      <div className='max-w-7xl w-full mx-auto'>
-        <Navbar></Navbar>
+      <div >
+        <Navbar ></Navbar>
       </div>
       <div>
         <Banner></Banner>
