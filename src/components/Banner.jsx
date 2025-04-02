@@ -20,7 +20,7 @@ const Banner = () => {
             }}
             className='relative'
         >
-            <div className=" min-h-[calc(100vh-300px)] mx-auto md:px-10 max-w-7xl">
+            <div className="  mx-auto md:px-10 max-w-7xl">
                 <div className="md:flex md:flex-row-reverse py-20 justify-between items-center space-y-5 ">
                     {/* Right Side Image */}
                     <Fade direction='right' triggerOnce>
@@ -52,12 +52,10 @@ const Banner = () => {
                             <p className="font-railwayfont md:text-5xl text-2xl uppercase text-orange-300 font-bold">
                                 hi! I'm
                             </p>
-                            {/* <p className="md:text-5xl md:py-3 text-2xl uppercase font-bold mt-1 bg-gradient-to-r from-blue-500 to-purple-600 font-Cinzel text-transparent bg-clip-text">
-                                Majidul Islam
-                            </p> */}
-                            <p className="md:text-5xl md:py-3 text-2xl uppercase font-bold mt-1 text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text">
+                            <p className="md:text-5xl md:py-3 text-2xl uppercase font-bold mt-1 bg-gradient-to-r from-blue-500 to-purple-600 font-Cinzel text-transparent bg-clip-text">
                                 Majidul Islam
                             </p>
+                            
 
                             <p className=' w-[300px] md:w-full'
                                 style={{
@@ -79,7 +77,7 @@ const Banner = () => {
                                     repeat={Infinity}
                                 />
                             </p>
-                            <p className='text-slate-200 text-lg md:py-2 py-1'>   I specialize in creating innovative web solutions with a focus on design, functionality, and user satisfaction. Bringing ideas to life with clean code and creative designs.</p>
+                            <p className='text-slate-200 text-lg md:py-2 py-1 font-railwayfont'>   I specialize in creating innovative web solutions with a focus on design, functionality, and user satisfaction. Bringing ideas to life with clean code and creative designs.</p>
                             <div className='space-y-5 mt-4'>
                                 <div className='flex items-center mb-6 justify-start gap-2'>
                                     <a href='mailto:majidul123tub@gmail.com' target="_blank"
@@ -92,7 +90,7 @@ const Banner = () => {
                                         rel="noopener noreferrer" className='border p-2 rounded-full bg-black hover:bg-[#004182]'>  <FaLinkedinIn className='md:text-2xl' /></a>
                                 </div>
                                 <a download
-                                    href='https://drive.google.com/uc?export=download&id=1xULRceWwX4n5yOTUT-zLvqYJx4hgQeH3' className="md:px-6 px-3 py-3 text-white font-semibold rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer">
+                                    href='https://drive.google.com/uc?export=download&id=1xULRceWwX4n5yOTUT-zLvqYJx4hgQeH3' className="md:px-6 px-3 py-3 text-white font-semibold font-railwayfont rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer">
                                     <span className='text-xl'> 📥</span>  DownLoad Resume</a>
                             </div>
                         </div>

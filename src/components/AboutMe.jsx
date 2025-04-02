@@ -4,17 +4,18 @@ import { Fade } from 'react-awesome-reveal';
 
 const AboutMe = () => {
     return (
-        <div id='about' className='px-3 md:px-10'>
-            <Fade direction='left' triggerOnce>
-                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">About <span className='text-yellow-500'>Me</span></h2>
+        <div id='about' className='md:my-10 md:py-10 my-3 py-3 max-w-7xl w-full mx-auto md:px-10 px-3'
+        >
+            <Fade direction='center' triggerOnce>
+                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold text-blue-800 mb-10">About <span className='text-yellow-500'>Me</span></h2>
             </Fade>
-            <div className=' md:my-5 md:py-5 lg:flex items-start justify-center gap-10 space-y-5'>
+            <div className=' md:my-5 md:py-5 grid md:grid-cols-2  items-start justify-between gap-10 space-y-5'>
                 <Fade direction='left' triggerOnce>
-                    <div className='border w-full rounded-xl bg-[040A18] mx-auto h-full  shadow-2xl'>
-                        <img className="w-full h-full filter contrast-150 grayscale rounded-lg" src="https://i.ibb.co.com/HNff0z2/IMG-20250101-WA0004-removebg-preview-1.png" alt="" />
+                    <div className='border w-full rounded-xl bg-[040A18] '>
+                        <img className="w-full" src="https://i.ibb.co.com/HNff0z2/IMG-20250101-WA0004-removebg-preview-1.png" alt="" />
                     </div>
                 </Fade>
-                <div className="max-w-4xl mx-auto">
+                <div className="">
 
                     <Fade direction='right' triggerOnce>
                         <p className="text-xl text-gray-400 mb-4">

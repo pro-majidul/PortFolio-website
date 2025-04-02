@@ -9,6 +9,7 @@ export default {
       fontFamily:{
         'railwayfont': "Raleway",
         'interfont': "Inter",
+        Cinzel: ['Cinzel', 'serif'],
       },
       animation: {
         'spin-slow': 'spin 2s linear infinite',
