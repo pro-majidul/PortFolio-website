@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import bgimage from '../assets/hero-bg.jpg';
+import bannerImage from '../assets/bannerBackgroundImage.gif';
 import { TypeAnimation } from 'react-type-animation';
 import { FaFacebookF } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { Fade } from 'react-awesome-reveal';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
+import ClipPathImage from './ClipPathImage';
 
 const Banner = () => {
     const [textcolor, setTextColor] = useState('white');
@@ -26,19 +28,20 @@ const Banner = () => {
                     <Fade direction='right' triggerOnce>
                         <div className="flex-1 w-full relative place-items-center">
                             <div className="flex items-center justify-center">
-                                <div className="relative w-56 h-56 md:w-80 md:h-80">
+                                <div className="relative w-72 h-72 md:w-96 md:h-96 p-3">
                                     {/* Outer Circle */}
-                                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500  via-green-400 via-yellow-400 via-orange-500 to-pink-500 animate-spin-slow">
+                                    <div
+                                        style={{
+                                            backgroundImage: `url(${bannerImage})`,
+                                            backgroundPosition: 'center',
+                                            backgroundSize: 'cover',
+                                        }}
+                                        className="absolute inset-0 rounded-full ">
+
                                     </div>
-                                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                                    <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
                                         {/* Profile Image */}
-                                        <div className="relative w-52 h-52 md:w-72 md:h-72 bg-gradient-to-r from-blue-400 to-purple-500 overflow-hidden rounded-full ">
-                                            <img
-                                                src="https://i.ibb.co.com/vDG0t8q/bg-image.png"
-                                                alt="Profile"
-                                                className="w-full h-full object-cover rounded-full"
-                                            />
-                                        </div>
+                                            <ClipPathImage></ClipPathImage>
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +58,7 @@ const Banner = () => {
                             <p className="md:text-5xl md:py-3 text-2xl uppercase font-bold mt-1 bg-gradient-to-r from-blue-500 to-purple-600 font-Cinzel text-transparent bg-clip-text">
                                 Majidul Islam
                             </p>
-                            
+
 
                             <p className=' w-[300px] md:w-full'
                                 style={{

@@ -13,7 +13,10 @@ function App() {
 
 
   return (
-    <section >
+    <section className="relative h-full w-full bg-[#0f172a]">
+
+      <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(125%_125%_at_50%_10%,rgba(255,255,255,0)_90%,rgba(102,51,238,1)_100%)]"></div>
+
       <div >
         <Navbar ></Navbar>
       </div>
@@ -29,7 +32,7 @@ function App() {
           backgroundOrigin: 'border-box',
 
         }}
-        >
+      >
         <AboutMe></AboutMe>
       </div>
       <div className='md:my-10 md:py-10 my-3 py-3 max-w-7xl w-full mx-auto'>

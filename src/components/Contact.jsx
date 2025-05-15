@@ -38,7 +38,7 @@ const Contact = () => {
 
 
     return (
-        <section id='contact' className="py-6 bg-[#070D1B]">
+        <section id='contact' className="py-6 ">
             <Fade direction='top' triggerOnce>
                 <h2 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text text-3xl font-bold text-center my-5 py-5 md:mb-10 md:pb-10  leading-tight ">Contact <span className='text-yellow-500'>Info</span></h2>
             </Fade>
