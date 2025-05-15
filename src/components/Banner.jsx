@@ -8,6 +8,9 @@ import { Fade } from 'react-awesome-reveal';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
 import ClipPathImage from './ClipPathImage';
+// import ShinyText from './ShinyText';
+  
+
 
 const Banner = () => {
     const [textcolor, setTextColor] = useState('white');
@@ -94,7 +97,7 @@ const Banner = () => {
                                 </div>
                                 <a download
                                     href='https://drive.google.com/uc?export=download&id=1xULRceWwX4n5yOTUT-zLvqYJx4hgQeH3' className="md:px-6 px-3 py-3 text-white font-semibold font-railwayfont rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer">
-                                    <span className='text-xl'> 📥</span>  DownLoad Resume</a>
+                                    <span className='text-xl'> 📥</span>  DownLoad Resume </a>
                             </div>
                         </div>
                     </Fade>

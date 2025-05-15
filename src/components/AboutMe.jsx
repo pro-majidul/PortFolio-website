@@ -2,6 +2,7 @@ import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 
 
+
 const AboutMe = () => {
     return (
         <div id='about' className='md:my-10 md:py-10 my-3 py-3 max-w-7xl w-full mx-auto md:px-10 px-3'
