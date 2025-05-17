@@ -35,7 +35,7 @@ function App() {
       >
         <AboutMe></AboutMe>
       </div>
-      <div className='md:my-10 md:py-10 my-3 py-3 max-w-7xl w-full mx-auto'>
+      <div className='md:my-5 md:py-5 my-3 py-3 max-w-7xl w-full mx-auto'>
         <Skills></Skills>
       </div>
       <div  >
