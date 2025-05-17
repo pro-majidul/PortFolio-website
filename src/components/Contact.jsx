@@ -49,32 +49,32 @@ const Contact = () => {
                         <p className="pt-2 pb-4 text-gray-400"> I am available for inquiries, collaborations, and consultations. Feel free to get in touch with me through any of the following methods.</p>
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">
-                                <p className='border p-3 rounded-full hover:border-orange-400'>
+                                <p className='border p-3 rounded-full hover:border-violet-600'>
                                     <FaLocationDot size={16} />
                                 </p>
-                                <span className='text-gray-400 hover:text-orange-300'>Rangpur , Dhaka , Bangladesh</span>
+                                <span className='text-gray-400 hover:text-violet-600'>Rangpur , Dhaka , Bangladesh</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <p className='border p-3 rounded-full hover:border-orange-400'>
+                                <p className='border p-3 rounded-full hover:border-violet-600'>
                                     <FaWhatsapp size={16} />
                                 </p>
                                 <a
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://wa.me/8801746637704" className='text-gray-400 text-xl hover:text-orange-300'> 01746637704</a>
+                                    href="https://wa.me/8801746637704" className='text-gray-400 text-xl hover:text-violet-600'> 01746637704</a>
                             </div>
                             <div className="flex items-center gap-3">
-                                <p className='border p-3 rounded-full hover:border-orange-400'>
+                                <p className='border p-3 rounded-full hover:border-violet-600'>
                                     <TbPhoneCall size={16} />
                                 </p>
-                                <a href="tel:+8801746637704" className='text-gray-400 text-xl hover:text-orange-300'>+08 01746637704</a>
+                                <a href="tel:+8801746637704" className='text-gray-400 text-xl hover:text-violet-600'>+08 01746637704</a>
                             </div>
                             <div className="flex items-center gap-3">
-                                <p className='border p-3 rounded-full hover:border-orange-400'> <MdEmail size={16} /></p>
+                                <p className='border p-3 rounded-full hover:border-violet-600'> <MdEmail size={16} /></p>
                                 <a
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=majidul123tub@gmail.com" className='text-gray-400 text-xl hover:text-orange-300'>majidul123tub@gamil.com</a>
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=majidul123tub@gmail.com" className='text-gray-400 text-xl hover:text-violet-600'>majidul123tub@gamil.com</a>
                             </div>
                         </div>
                     </div>

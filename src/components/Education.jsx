@@ -17,7 +17,7 @@ const Education = () => {
     };
 
     return (
-        <section id="education" className="py-10 bg-[#070D1B] text-gray-300">
+        <section id="education" className='md:my-10 md:py-10 my-3 py-3 max-w-7xl w-full mx-auto bg-[#070D1B] text-gray-300' >
             <motion.div
                 variants={containerVariants}
                 initial="hidden"

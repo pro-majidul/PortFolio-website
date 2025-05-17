@@ -14,7 +14,7 @@ const Projects = () => {
 
     console.log(projects)
     return (
-        <section id="projects" className="px-3 md:px-10">
+        <section id="projects" className="px-3 md:px-5">
             <h2 className="text-2xl text-center md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">My Latest <span className='text-yellow-500'>Projects</span></h2>
 
             <div>
