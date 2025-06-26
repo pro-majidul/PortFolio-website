@@ -12,6 +12,7 @@ import { VscVscode } from "react-icons/vsc";
 import { IoLogoFigma } from "react-icons/io5";
 import { Button } from './ui/button';
 import { TextShimmerWave } from './ui/TextShimmerWave';
+import { InfiniteSlider } from './ui/InfiniteSlider';
 
 const Skills = () => {
 
@@ -43,46 +44,135 @@ const Skills = () => {
     return (
         <section id="skills">
             <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold  mb-10">  <TextShimmerWave>My Skills</TextShimmerWave></h2>
-            
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
-                    initial="hidden"
-                    animate="visible"
-                    variants={{
-                        hidden: { opacity: 0 },
-                        visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
-                    }}
-                >
-                    {skillsData.map((category, index) => (
-                        <motion.div
-                            key={index}
-                            className=" transition-all duration-300 cursor-pointer rounded-lg p-6"
-                            whileHover={{ scale: 1.05 }}
-                            variants={{
-                                hidden: { opacity: 0, y: 20 },
-                                visible: { opacity: 1, y: 0 },
-                            }}
-                        >
-                            <ul>
-                                <div className="flex flex-col items-center bg-gray-200 rounded-xl shadow-neumorphism p-6 transform hover:scale-105 transition-transform duration-300">
-                                    <div className="w-24 h-24 mb-4 rounded-full bg-gray-100 flex items-center justify-center shadow-neumorphism-inner ">
-                                        {category.icon}
+                <InfiniteSlider speed={80} speedOnHover={30} className="w-full">
+                    <motion.div
+                        className="flex"
+                        initial="hidden"
+                        animate="visible"
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+                        }}
+                    >
+
+                        {skillsData.slice(0, 7).map((category, index) => (
+                            <motion.div
+                                key={index}
+                                className=" transition-all duration-300 cursor-pointer rounded-lg p-6"
+                                whileHover={{ scale: 1.05 }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                            >
+                                <ul>
+                                    <div className="flex flex-col items-center bg-gray-200 rounded-xl shadow-neumorphism p-6 transform hover:scale-105 transition-transform duration-300">
+                                        <div className="md:w-24 md:h-24 mb-4 rounded-full bg-gray-100 flex items-center justify-center shadow-neumorphism-inner p-2 md:p-0">
+                                            {category.icon}
+                                        </div>
+                                        <motion.div
+                                            className="w-full bg-gray-300 rounded-full h-2 md:h-3"
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${category.percentage}%` }}
+                                            transition={{ duration: 1.2, ease: "easeInOut" }}
+                                        >
+                                            <div className="bg-blue-600 h-2 md:h-3 rounded-full"></div>
+                                        </motion.div>
+                                        <p className="text-lg w-full font-medium text-gray-700 flex justify-between"> <p>{category.name}</p><p>{category.percentage}%</p></p>
                                     </div>
-                                    <motion.div
-                                        className="w-full bg-gray-300 rounded-full h-2 md:h-3"
-                                        initial={{ width: 0 }}
-                                        animate={{ width: `${category.percentage}%` }}
-                                        transition={{ duration: 1.2, ease: "easeInOut" }}
-                                    >
-                                        <div className="bg-blue-600 h-2 md:h-3 rounded-full"></div>
-                                    </motion.div>
-                                    <p className="text-lg w-full font-medium text-gray-700 flex justify-between"> <p>{category.name}</p><p>{category.percentage}%</p></p>
-                                </div>
-                            </ul>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </InfiniteSlider>
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <InfiniteSlider speed={80} speedOnHover={30} className="w-full" reverse>
+                    <motion.div
+                        className="flex"
+                        initial="hidden"
+                        animate="visible"
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+                        }}
+                    >
+
+                        {skillsData.slice(7, 15).map((category, index) => (
+                            <motion.div
+                                key={index}
+                                className=" transition-all duration-300 cursor-pointer rounded-lg p-6"
+                                whileHover={{ scale: 1.05 }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                            >
+                                <ul>
+                                    <div className="flex flex-col items-center bg-gray-200 rounded-xl shadow-neumorphism p-6 transform hover:scale-105 transition-transform duration-300">
+                                        <div className="md:w-24 md:h-24 mb-4 rounded-full bg-gray-100 flex items-center justify-center shadow-neumorphism-inner p-2 md:p-0">
+                                            {category.icon}
+                                        </div>
+                                        <motion.div
+                                            className="w-full bg-gray-300 rounded-full h-2 md:h-3"
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${category.percentage}%` }}
+                                            transition={{ duration: 1.2, ease: "easeInOut" }}
+                                        >
+                                            <div className="bg-blue-600 h-2 md:h-3 rounded-full"></div>
+                                        </motion.div>
+                                        <p className="text-lg w-full font-medium text-gray-700 flex justify-between"> <p>{category.name}</p><p>{category.percentage}%</p></p>
+                                    </div>
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </InfiniteSlider>
+            </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <InfiniteSlider speed={80} speedOnHover={30} className="w-full" >
+                    <motion.div
+                        className="flex"
+                        initial="hidden"
+                        animate="visible"
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
+                        }}
+                    >
+
+                        {skillsData.slice(15, 22).map((category, index) => (
+                            <motion.div
+                                key={index}
+                                className=" transition-all duration-300 cursor-pointer rounded-lg p-6"
+                                whileHover={{ scale: 1.05 }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 20 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                            >
+                                <ul>
+                                    <div className="flex flex-col items-center bg-gray-200 rounded-xl shadow-neumorphism p-6 transform hover:scale-105 transition-transform duration-300">
+                                        <div className="md:w-24 md:h-24 mb-4 rounded-full bg-gray-100 flex items-center justify-center shadow-neumorphism-inner p-2 md:p-0 ">
+                                            {category.icon}
+                                        </div>
+                                        <motion.div
+                                            className="w-full bg-gray-300 rounded-full h-2 md:h-3"
+                                            initial={{ width: 0 }}
+                                            animate={{ width: `${category.percentage}%` }}
+                                            transition={{ duration: 1.2, ease: "easeInOut" }}
+                                        >
+                                            <div className="bg-blue-600 h-2 md:h-3 rounded-full"></div>
+                                        </motion.div>
+                                        <p className="text-lg w-full font-medium text-gray-700 flex justify-between"> <p>{category.name}</p><p>{category.percentage}%</p></p>
+                                    </div>
+                                </ul>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </InfiniteSlider>
             </div>
 
         </section>
