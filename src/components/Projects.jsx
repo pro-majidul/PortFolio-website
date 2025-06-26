@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
 import { FaArrowRightLong } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import { TextShimmerWave } from './ui/TextShimmerWave';
+import { ButtonTextWave } from './ui/ButtonTextWave';
 
 const Projects = () => {
     const [projects, setProjects] = useState([])
@@ -15,7 +17,9 @@ const Projects = () => {
     console.log(projects)
     return (
         <section id="projects" className="px-3 md:px-5">
-            <h2 className="text-2xl text-center md:my-10 md:pb-10 md:text-3xl lg:text-4xl font-bold text-blue-800 mb-10">My Latest <span className='text-yellow-500'>Projects</span></h2>
+            <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold  mb-10">  <TextShimmerWave>
+
+                My Latest Projects</TextShimmerWave></h2>
 
             <div>
                 <section>
@@ -35,7 +39,7 @@ const Projects = () => {
                                                 <h3 className="text-xl font-semibold text-black">{project.project_title}</h3>
 
                                                 <p className="leading-snug text-black">{project?.description?.slice(0, 120)}...</p>
-                                                <Link to={`/projects/${project._id}`} className='flex items-center gap-1 md:w-5/12  w-6/12 bg-green-950 px-4 py-1 rounded-xl hover:bg-green-800'><span className='text-white'>View Details </span> <FaArrowRightLong className='text-yellow-400' /></Link>
+                                                <Link to={`/projects/${project._id}`} className='flex items-center gap-1 md:w-5/12  w-6/12 bg-green-950 px-4 py-1 rounded-xl hover:bg-green-800'><span className='text-white'><ButtonTextWave>View Details</ButtonTextWave> </span> <FaArrowRightLong className='text-yellow-400' /></Link>
                                             </div>
                                         </div>
                                     </div>

@@ -3,6 +3,7 @@ import 'aos/dist/aos.css';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css'
 import { TextShimmerWave } from './ui/TextShimmerWave';
+import { ButtonTextWave } from './ui/ButtonTextWave';
 AOS.init();
 
 
@@ -15,7 +16,7 @@ const AboutMe = () => {
 
 
 
-                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold text-blue-800 mb-10">  <TextShimmerWave>About  </TextShimmerWave><span className='text-yellow-500'><TextShimmerWave>Me  </TextShimmerWave></span></h2>
+                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold  mb-10">  <TextShimmerWave>About Me</TextShimmerWave></h2>
 
 
             </div>
@@ -76,7 +77,7 @@ const AboutMe = () => {
 
                     <div data-aos="zoom-in-up">
                         <p className="text-xl text-gray-400 ">
-                            Hello! I'm <span className="font-semibold bg-gradient-to-r  from-blue-500 to-purple-600  text-transparent bg-clip-text">MD Majidul Islam</span> I am a hardworking, enthusiastic and forward-thinking  MERN Stack Web Developer, whose goal is to establish myself as a skilled software engineer and make people's lives easier and better through technology.
+                            Hello! I'm <span className="font-semibold"><ButtonTextWave> Md Majidul Islam</ButtonTextWave></span> I am a hardworking, enthusiastic and forward-thinking  MERN Stack Web Developer, whose goal is to establish myself as a skilled software engineer and make people's lives easier and better through technology.
 
 
                         </p>

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { TextShimmerWave } from "./ui/TextShimmerWave";
 
 const Education = () => {
     const containerVariants = {
@@ -24,9 +25,7 @@ const Education = () => {
                 animate="visible"
                 className="w-full mx-auto px-3 md:px-10 text-center"
             >
-                <h2 className="text-3xl font-bold text-transparent bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text ">
-                    Educational <span className="text-yellow-500">Qualification</span>
-                </h2>
+                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold  mb-10">  <TextShimmerWave>Educational Qualification</TextShimmerWave></h2>
                 <p className="mt-4 text-lg">
                     My academic background and educational journey.
                 </p>

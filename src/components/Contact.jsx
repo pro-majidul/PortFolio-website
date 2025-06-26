@@ -4,6 +4,7 @@ import { TbPhoneCall } from 'react-icons/tb';
 import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 import { Fade } from 'react-awesome-reveal';
+import { TextShimmerWave } from './ui/TextShimmerWave';
 
 const Contact = () => {
 
@@ -40,7 +41,7 @@ const Contact = () => {
     return (
         <section id='contact' className="py-6 ">
             <Fade direction='top' triggerOnce>
-                <h2 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text text-3xl font-bold text-center my-5 py-5 md:mb-10 md:pb-10  leading-tight ">Contact <span className='text-yellow-500'>Info</span></h2>
+                 <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold  mb-10">  <TextShimmerWave>Contact Info</TextShimmerWave></h2>
             </Fade>
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                 <Fade direction='left' triggerOnce >

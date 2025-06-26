@@ -8,8 +8,10 @@ import { Fade } from 'react-awesome-reveal';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { SiGmail } from 'react-icons/si';
 import ClipPathImage from './ClipPathImage';
+import { TextShimmerWave } from './ui/TextShimmerWave';
+import { ButtonTextWave } from './ui/ButtonTextWave';
 // import ShinyText from './ShinyText';
-  
+
 
 
 const Banner = () => {
@@ -44,7 +46,7 @@ const Banner = () => {
                                     </div>
                                     <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
                                         {/* Profile Image */}
-                                            <ClipPathImage></ClipPathImage>
+                                        <ClipPathImage></ClipPathImage>
                                     </div>
                                 </div>
                             </div>
@@ -58,8 +60,8 @@ const Banner = () => {
                             <p className="font-railwayfont md:text-5xl text-2xl uppercase text-orange-300 font-bold">
                                 hi! I'm
                             </p>
-                            <p className="md:text-5xl md:py-3 text-2xl uppercase font-bold mt-1 bg-gradient-to-r from-blue-500 to-purple-600 font-Cinzel text-transparent bg-clip-text">
-                                Majidul Islam
+                            <p className="md:text-5xl md:py-3 text-2xl uppercase font-bold mt-1 font-Cinzel ">
+                                <TextShimmerWave> Majidul Islam</TextShimmerWave>
                             </p>
 
 
@@ -96,8 +98,8 @@ const Banner = () => {
                                         rel="noopener noreferrer" className='border p-2 rounded-full bg-black hover:bg-[#004182]'>  <FaLinkedinIn className='md:text-2xl' /></a>
                                 </div>
                                 <a download
-                                    href='https://drive.google.com/uc?export=download&id=1xULRceWwX4n5yOTUT-zLvqYJx4hgQeH3' className="md:px-6 px-3 py-3 text-white font-semibold font-railwayfont rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer">
-                                    <span className='text-xl'> 📥</span>  DownLoad Resume </a>
+                                    href='https://drive.google.com/uc?export=download&id=1xULRceWwX4n5yOTUT-zLvqYJx4hgQeH3' className="md:px-6 px-3 py-3  font-semibold font-railwayfont rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer">
+                                    <span className='text-xl'> 📥</span>  <ButtonTextWave>DownLoad Resume</ButtonTextWave> </a>
                             </div>
                         </div>
                     </Fade>
