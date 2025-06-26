@@ -29,10 +29,24 @@ const AboutMe = () => {
                     className='space-y-3'
 
                 >
-                    <div className='border w-full rounded-xl bg-[040A18] '>
+                    
 
-                        <img className="w-full" src="https://i.ibb.co.com/HNff0z2/IMG-20250101-WA0004-removebg-preview-1.png" alt="" />
+
+                    <div className="relative rounded-xl p-[3px] overflow-hidden bg-transparent">
+                        {/* Animated gradient border */}
+                        <div className="absolute inset-0 z-0 animate-spin-veryslow rounded-2xl bg-[conic-gradient(from_0deg,_#ff0000,_#ff5e00,_#ffbb00,_#ffee00,_#d4ff00,_#83ff00,_#28ff00,_#00ff55,_#00ffbf,_#00ffe9,_#00d9ff,_#009dff,_#005dff,_#2500ff,_#6b00ff,_#a200ff,_#d100ff,_#f200ff,_#ff00c8,_#ff0080,_#ff0040,_#ff0000)]"></div>
+                        <div className='border w-full rounded-xl bg-[#040A18] relative overflow-hidden'>
+                            <img
+                                className="w-full"
+                                src="https://i.ibb.co.com/HNff0z2/IMG-20250101-WA0004-removebg-preview-1.png"
+                                alt=""
+                            />
+
+                        </div>
+
+
                     </div>
+
                     <div class="flex -space-x-2 xl:-space-x-3 rtl:space-x-reverse">
                         <Tooltip id="my-tooltip" effect="solid" place="bottom" />
 
