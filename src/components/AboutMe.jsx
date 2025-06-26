@@ -2,7 +2,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css'
+import { TextShimmerWave } from './ui/TextShimmerWave';
 AOS.init();
+
 
 
 const AboutMe = () => {
@@ -11,7 +13,11 @@ const AboutMe = () => {
         >
             <div data-aos="fade-down-left">
 
-                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold text-blue-800 mb-10">About <span className='text-yellow-500'>Me</span></h2>
+
+
+                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold text-blue-800 mb-10">  <TextShimmerWave>About  </TextShimmerWave><span className='text-yellow-500'><TextShimmerWave>Me  </TextShimmerWave></span></h2>
+
+
             </div>
 
             {/* </Fade> */}
@@ -28,6 +34,8 @@ const AboutMe = () => {
                     </div>
                     <div class="flex -space-x-2 xl:-space-x-3 rtl:space-x-reverse">
                         <Tooltip id="my-tooltip" effect="solid" place="bottom" />
+
+
 
                         <div data-tooltip-id="my-tooltip" data-event="click" data-tooltip-content="MongoDB" class="bg-gray-600/10 backdrop-blur-xl border border-white/10 shadow-lg w-14 h-14 xl:w-[65px] xl:h-[65px] 2xl:w-[75px] 2xl:h-[75px] rounded-full flex items-center justify-center hover:bg-black transition-all ease-in-out">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" role="img" viewBox="0 0 24 24" class="text-2xl xl:text-3xl 2xl:text-3xl text-[#4DB33D]" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
