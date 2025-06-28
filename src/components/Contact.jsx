@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import toast from 'react-hot-toast';
 import { Fade } from 'react-awesome-reveal';
 import { TextShimmerWave } from './ui/TextShimmerWave';
+import { TextShimmer } from './ui/TextShimmer';
 
 const Contact = () => {
 
@@ -41,12 +42,15 @@ const Contact = () => {
     return (
         <section id='contact' className="py-6 ">
             <Fade direction='top' triggerOnce>
-                 <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold  mb-10">  <TextShimmerWave>Contact Info</TextShimmerWave></h2>
+                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold  mb-10">  <TextShimmerWave>Contact Info</TextShimmerWave></h2>
             </Fade>
-            <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+            <div className="grid  grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
                 <Fade direction='left' triggerOnce >
                     <div className="py-6 md:py-0 md:px-6">
-                        <h1 className="text-4xl font-bold">Let’s Discuss Your Project</h1>
+                        <h1 className="text-4xl font-bold">
+                            <TextShimmer>
+                            Let’s Discuss Your Project
+                        </TextShimmer></h1>
                         <p className="pt-2 pb-4 text-gray-400"> I am available for inquiries, collaborations, and consultations. Feel free to get in touch with me through any of the following methods.</p>
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">
@@ -83,10 +87,12 @@ const Contact = () => {
 
                 <Fade direction='right' triggerOnce>
                     <form onSubmit={sendEmail} className="container w-full max-w-xl md:p-8 mx-auto space-y-6 rounded-md shadow ">
-                        <p className="text-4xl font-bold">Send me A message</p>
+                        <p className="text-4xl font-bold"><TextShimmer>
+                            Send me A message
+                        </TextShimmer></p>
                         <div>
                             <label className="block mb-1 ml-1">Name</label>
-                            <input type="text" name='from_name' placeholder="Your name" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624] text-gray-400"/>
+                            <input type="text" name='from_name' placeholder="Your name" required className="block w-full p-2 rounded focus:outline-none focus:ring focus:ring-opacity-25 focus:dark:ring-violet-600 dark:bg-[#101624] text-gray-400" />
                         </div>
                         <div>
                             <label className="block mb-1 ml-1">Email</label>

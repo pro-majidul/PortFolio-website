@@ -24,15 +24,16 @@ function App() {
         <Banner></Banner>
       </div>
       <div
-        // style={{
-        //   backgroundImage: "url('https://i.ibb.co/BKHwRVYG/home-grad-type-1-1.png'), url('https://i.ibb.co/KpfB8TZT/home-grad-type-2.png')",
-        //   backgroundPosition: ' left top , right bottom',
-        //   backgroundRepeat: 'no-repeat, no-repeat',
-        //   backgroundSize: '50%,50%',
-        //   backgroundOrigin: 'border-box',
+      // style={{
+      //   backgroundImage: "url('https://i.ibb.co/BKHwRVYG/home-grad-type-1-1.png'), url('https://i.ibb.co/KpfB8TZT/home-grad-type-2.png')",
+      //   backgroundPosition: ' left top , right bottom',
+      //   backgroundRepeat: 'no-repeat, no-repeat',
+      //   backgroundSize: '50%,50%',
+      //   backgroundOrigin: 'border-box',
 
-        // }}
+      // }}
       >
+        
         <AboutMe></AboutMe>
       </div>
       <div className='md:my-5 md:py-5 my-3 py-3 max-w-7xl w-full mx-auto'>
@@ -46,7 +47,10 @@ function App() {
       </div>
       <div className='md:mt-10 md:py-10 mt-3 py-3 max-w-7xl w-full mx-auto'>
         <Contact></Contact>
+
+
       </div>
+
 
     </section>
   )

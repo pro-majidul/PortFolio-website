@@ -2,6 +2,7 @@ import React from 'react';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { Link, useLoaderData } from 'react-router-dom';
 import bgimage from '../assets/hero-bg.jpg';
+import { TextShimmer } from '@/components/ui/TextShimmer';
 
 const Details = () => {
     const data = useLoaderData()
@@ -19,13 +20,21 @@ const Details = () => {
                 <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(125%_125%_at_50%_10%,rgba(255,255,255,0)_90%,rgba(102,51,238,1)_100%)]"></div>
             </div>
             <div className='w-full max-w-7xl mx-auto space-y-4 md:space-y-6'>
-                <Link to='/' className='flex items-center gap-2 md:w-2/12  w-10/12 bg-green-950 px-4 py-1 rounded-xl hover:bg-green-800'> <FaArrowLeftLong className='text-yellow-400 text-xl' /><span className='text-xl'>Back to Home</span></Link>
+                <Link to='/' className='flex items-center gap-2 md:w-2/12  w-10/12 bg-green-950 px-4 py-1 rounded-xl hover:bg-green-800'> <FaArrowLeftLong className='text-yellow-400 text-xl' /><span className='text-xl'>
+
+
+                    <TextShimmer> Back to Home</TextShimmer>
+                </span></Link>
                 <div className='space-y-4'>
 
                     <img className='w-full' src={data.image} alt="" />
 
                     <div className='space-y-3'>
-                        <h3 className='md:text-3xl text-xl'><span className=' text-yellow-300'>Project Name :</span> {data.project_title}</h3>
+                        <h3 className='md:text-3xl text-xl'><span className=' text-yellow-300'>Project Name :</span>
+                         {data.project_title}
+                         
+                         
+                         </h3>
                         <p className='md:text-2xl text-xl'><span className=' text-yellow-300 md:text-3xl text-xl'>Descriptions :</span>
                             {data.description}
 

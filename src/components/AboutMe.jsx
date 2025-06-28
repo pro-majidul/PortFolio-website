@@ -3,7 +3,8 @@ import 'aos/dist/aos.css';
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css'
 import { TextShimmerWave } from './ui/TextShimmerWave';
-import { ButtonTextWave } from './ui/ButtonTextWave';
+import { TextShimmer } from './ui/TextShimmer';
+import CustomImage from './custom/CustomImage';
 AOS.init();
 
 
@@ -22,24 +23,33 @@ const AboutMe = () => {
             </div>
 
             {/* </Fade> */}
-            <div className=' md:my-5 md:py-5 grid md:grid-cols-2  items-start justify-between gap-10 space-y-5'>
+            <div className=' md:my-5 md:py-5 grid md:grid-cols-2  items-start justify-between gap-4 space-y-5'>
                 {/* <Fade direction='left' triggerOnce> */}
                 <div data-aos="fade-down-right"
 
                     className='space-y-3'
 
                 >
-                    
+
 
 
                     <div className="relative rounded-xl p-[3px] overflow-hidden bg-transparent">
                         {/* Animated gradient border */}
-                        <div className="absolute inset-0 z-0 animate-spin-veryslow rounded-2xl bg-[conic-gradient(from_0deg,_#ff0000,_#ff5e00,_#ffbb00,_#ffee00,_#d4ff00,_#83ff00,_#28ff00,_#00ff55,_#00ffbf,_#00ffe9,_#00d9ff,_#009dff,_#005dff,_#2500ff,_#6b00ff,_#a200ff,_#d100ff,_#f200ff,_#ff00c8,_#ff0080,_#ff0040,_#ff0000)]"></div>
-                        <div className='border w-full rounded-xl bg-[#040A18] relative overflow-hidden'>
+                        {/* <div className="absolute inset-0 z-0 animate-spin-veryslow rounded-2xl bg-[conic-gradient(from_0deg,_#ff0000,_#ff5e00,_#ffbb00,_#ffee00,_#d4ff00,_#83ff00,_#28ff00,_#00ff55,_#00ffbf,_#00ffe9,_#00d9ff,_#009dff,_#005dff,_#2500ff,_#6b00ff,_#a200ff,_#d100ff,_#f200ff,_#ff00c8,_#ff0080,_#ff0040,_#ff0000)]">bg-[#040A18]</div> */}
+
+
+                        <div
+                            className='absolute w-full h-full flex items-center justify-center'
+                        >
+                            <CustomImage></CustomImage>
+                        </div>
+
+{/* <div className='border w-full md:h-[800px] h-[500px] inset-0'></div> */}
+                        <div className=' w-full rounded-xl border   relative overflow-hidden'>
                             <img
                                 className="w-full"
-                                src="https://i.ibb.co.com/HNff0z2/IMG-20250101-WA0004-removebg-preview-1.png"
-                                alt=""
+                                src="https://i.ibb.co/xvC27Jt/md-majidul-islam.png"
+                                alt="majidul islam"
                             />
 
                         </div>
@@ -91,7 +101,10 @@ const AboutMe = () => {
 
                     <div data-aos="zoom-in-up">
                         <p className="text-xl text-gray-400 ">
-                            Hello! I'm <span className="font-semibold"><ButtonTextWave> Md Majidul Islam</ButtonTextWave></span> I am a hardworking, enthusiastic and forward-thinking  MERN Stack Web Developer, whose goal is to establish myself as a skilled software engineer and make people's lives easier and better through technology.
+                            Hello! I'm <span className="font-semibold">
+
+                                <TextShimmer > Md Majidul Islam</TextShimmer>
+                            </span> I am a hardworking, enthusiastic and forward-thinking  MERN Stack Web Developer, whose goal is to establish myself as a skilled software engineer and make people's lives easier and better through technology.
 
 
                         </p>

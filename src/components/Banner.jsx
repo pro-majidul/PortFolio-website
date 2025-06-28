@@ -10,6 +10,8 @@ import { SiGmail } from 'react-icons/si';
 import ClipPathImage from './ClipPathImage';
 import { TextShimmerWave } from './ui/TextShimmerWave';
 import { ButtonTextWave } from './ui/ButtonTextWave';
+import { TextEffect } from './ui/TextEffect';
+import { TextShimmer } from './ui/TextShimmer';
 // import ShinyText from './ShinyText';
 
 
@@ -85,7 +87,7 @@ const Banner = () => {
                                     repeat={Infinity}
                                 />
                             </p>
-                            <p className='text-slate-200 text-lg md:py-2 py-1 font-railwayfont'>   I specialize in creating innovative web solutions with a focus on design, functionality, and user satisfaction. Bringing ideas to life with clean code and creative designs.</p>
+                            <p className='text-slate-200 text-lg md:py-2 py-1 font-railwayfont'> <TextEffect>I specialize in creating innovative web solutions with a focus on design, functionality, and user satisfaction. Bringing ideas to life with clean code and creative designs.</TextEffect>  </p>
                             <div className='space-y-5 mt-4'>
                                 <div className='flex items-center mb-6 justify-start gap-2'>
                                     <a href='mailto:majidul123tub@gmail.com' target="_blank"
@@ -99,7 +101,11 @@ const Banner = () => {
                                 </div>
                                 <a download
                                     href='https://drive.google.com/uc?export=download&id=1xULRceWwX4n5yOTUT-zLvqYJx4hgQeH3' className="md:px-6 px-3 py-3  font-semibold font-railwayfont rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-500 transition-all duration-300 hover:text-orange-400 cursor-pointer">
-                                    <span className='text-xl'> 📥</span>  <ButtonTextWave>DownLoad Resume</ButtonTextWave> </a>
+                                    <span className='text-xl'> 📥</span> 
+                                    <TextShimmer>DownLoad Resume</TextShimmer>
+                                     {/* <ButtonTextWave>DownLoad Resume</ButtonTextWave>  */}
+                                     
+                                     </a>
                             </div>
                         </div>
                     </Fade>
