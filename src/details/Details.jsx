@@ -446,7 +446,7 @@ export default function ProjectDetailsPage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="transition-all duration-300 bg-transparent border-accent text-[#059669] hover:bg-[#059669]/90 hover:text-accent-foreground"
+                className="transition-all duration-300 bg-transparent border-[#059669] text-[#059669] hover:bg-[#059669] hover:text-white"
                 asChild
               >
                 <a
