@@ -459,51 +459,37 @@ export default function ProjectDetailsPage() {
             </div>
 
             {/* Project Meta */}
-            {/* <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground animate-fade-in-up animation-delay-600">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground animate-fade-in-up animation-delay-600">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                {projectData.year}
+                2024 - 2025
               </div>
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                {projectData.role}
+                Full Stack Developer
               </div>
               <div className="flex items-center gap-2">
-                <Target className="w-4 h-4" />
-                {projectData.duration}
+                <Target className="w-4 h-4" />8 To 10 Days
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Project Images */}
-      {/* <section className="py-12 bg-muted/30">
+      <section className="py-12 bg-muted/30">
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="relative mb-8">
               <img
-                src={projectData.images[activeImage] || "/placeholder.svg"}
-                alt={`${projectData.title} screenshot ${activeImage + 1}`}
+                src={projectData.image || "/placeholder.svg"}
+                alt={`${projectData.image} screenshot ${activeImage + 1}`}
                 className="w-full h-[400px] object-cover rounded-lg shadow-2xl transition-all duration-500"
               />
             </div>
-            <div className="flex justify-center gap-2">
-              {projectData.images.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveImage(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    activeImage === index
-                      ? "bg-primary"
-                      : "bg-border hover:bg-primary/50"
-                  }`}
-                />
-              ))}
-            </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Project Details */}
       <section className="py-16">
