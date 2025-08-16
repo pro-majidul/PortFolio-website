@@ -494,7 +494,7 @@ export default function ProjectDetailsPage() {
       {/* Project Details */}
       <section className="py-16">
         <div className="container px-4 mx-auto">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="grid gap-8 md:grid-cols-3">
               {/* Main Content */}
               <div className="space-y-8 md:col-span-2">
@@ -603,15 +603,15 @@ export default function ProjectDetailsPage() {
                 </Card>
 
                 {/* Challenges & Solutions */}
-                {/* <Card className="animate-fade-in-up animation-delay-400">
+                <Card className="animate-fade-in-up animation-delay-400 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle>Challenges & Solutions</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
-                      {projectData.challenges.map((challenge, index) => (
+                      {projectData.challenges_learnings.implemented_features.map((challenge, index) => (
                         <li key={index} className="flex items-start gap-3">
-                          <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-accent" />
+                          <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                           <span className="text-muted-foreground">
                             {challenge}
                           </span>
@@ -619,10 +619,10 @@ export default function ProjectDetailsPage() {
                       ))}
                     </ul>
                   </CardContent>
-                </Card> */}
+                </Card>
 
                 {/* Results */}
-                {/* <Card className="animate-fade-in-up animation-delay-600">
+                {/* <Card className="animate-fade-in-up animation-delay-600 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle>Results & Impact</CardTitle>
                   </CardHeader>
@@ -644,7 +644,7 @@ export default function ProjectDetailsPage() {
               {/* Sidebar */}
               <div className="space-y-6">
                 {/* Technologies */}
-                <Card className="animate-fade-in-up animation-delay-300">
+                <Card className="animate-fade-in-up animation-delay-300 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle className="text-lg">Technologies Used</CardTitle>
                   </CardHeader>
@@ -664,7 +664,7 @@ export default function ProjectDetailsPage() {
                 </Card>
 
                 {/* Quick Links */}
-                {/* <Card className="animate-fade-in-up animation-delay-500">
+                <Card className="animate-fade-in-up animation-delay-500 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle className="text-lg">Quick Links</CardTitle>
                   </CardHeader>
@@ -675,7 +675,7 @@ export default function ProjectDetailsPage() {
                       asChild
                     >
                       <a
-                        href={projectData.liveUrl}
+                        href={projectData.project_links.live_site}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -686,11 +686,11 @@ export default function ProjectDetailsPage() {
 
                     <Button
                       variant="outline"
-                      className="justify-start w-full transition-all duration-300 bg-transparent hover:bg-accent hover:text-accent-foreground"
+                      className="justify-start w-full transition-all duration-300 bg-transparent hover:bg-[#059669] hover:text-primary-foreground"
                       asChild
                     >
                       <a
-                        href={projectData.githubClient}
+                        href={projectData.project_links.frontend_repository}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -701,11 +701,11 @@ export default function ProjectDetailsPage() {
 
                     <Button
                       variant="outline"
-                      className="justify-start w-full transition-all duration-300 bg-transparent hover:bg-accent hover:text-accent-foreground"
+                      className="justify-start w-full transition-all duration-300 bg-transparent hover:bg-[#059669] hover:text-primary-foreground"
                       asChild
                     >
                       <a
-                        href={projectData.githubServer}
+                        href={projectData.project_links.backend_repository}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -714,7 +714,7 @@ export default function ProjectDetailsPage() {
                       </a>
                     </Button>
                   </CardContent>
-                </Card> */}
+                </Card>
               </div>
             </div>
           </div>
