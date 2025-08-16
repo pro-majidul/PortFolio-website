@@ -609,26 +609,28 @@ export default function ProjectDetailsPage() {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
-                      {projectData.challenges_learnings.implemented_features.map((challenge, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
-                          <span className="text-muted-foreground">
-                            {challenge}
-                          </span>
-                        </li>
-                      ))}
+                      {projectData.challenges_learnings.implemented_features.map(
+                        (challenge, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                            <span className="text-muted-foreground">
+                              {challenge}
+                            </span>
+                          </li>
+                        )
+                      )}
                     </ul>
                   </CardContent>
                 </Card>
 
                 {/* Results */}
-                {/* <Card className="animate-fade-in-up animation-delay-600 bg-[#f1f5f9]">
+                <Card className="animate-fade-in-up animation-delay-600 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle>Results & Impact</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
-                      {projectData.outcomes.map((outcome, index) => (
+                      {projectData.objectives.map((outcome, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-chart-4" />
                           <span className="font-medium text-muted-foreground">
@@ -638,7 +640,7 @@ export default function ProjectDetailsPage() {
                       ))}
                     </ul>
                   </CardContent>
-                </Card> */}
+                </Card>
               </div>
 
               {/* Sidebar */}
