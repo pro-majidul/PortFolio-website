@@ -517,23 +517,88 @@ export default function ProjectDetailsPage() {
                 </Card>
 
                 {/* Features */}
-                {/* <Card className="animate-fade-in-up animation-delay-200">
+                <Card className="animate-fade-in-up animation-delay-200 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle>Key Features</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
-                      {projectData.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-primary" />
-                          <span className="text-muted-foreground">
-                            {feature}
-                          </span>
-                        </li>
-                      ))}
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.user_roles.admin_role}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.user_roles.employee_role}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                         {projectData.features.user_roles.hr_role}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.user_roles.admin_role}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                         {projectData.features.employee_panel.performance_reports}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.employee_panel.salary_info}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.hr_panel.employee_list}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.hr_panel.salary_payment}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.hr_panel.attendance_tracking}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.admin_panel.dashboard}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                          {projectData.features.admin_panel.employee_management}
+                        </span>
+                      </li>
+                      <li  className="flex items-start gap-3">
+                        <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
+                        <span className="text-muted-foreground">
+                         {projectData.features.admin_panel.salary_approval}
+                        </span>
+                      </li>
+                      
                     </ul>
                   </CardContent>
-                </Card> */}
+                </Card>
 
                 {/* Challenges & Solutions */}
                 {/* <Card className="animate-fade-in-up animation-delay-400">
@@ -587,7 +652,7 @@ export default function ProjectDetailsPage() {
                         <Badge
                           key={index}
                           variant="secondary"
-                          className="transition-colors duration-300 cursor-default bg-muted hover:bg-primary hover:text-primary-foreground"
+                          className="transition-colors duration-300 cursor-default bg-muted hover:bg-[#059669] hover:text-primary-foreground"
                         >
                           {tech}
                         </Badge>
@@ -604,7 +669,7 @@ export default function ProjectDetailsPage() {
                   <CardContent className="space-y-3">
                     <Button
                       variant="outline"
-                      className="justify-start w-full transition-all duration-300 bg-transparent hover:bg-primary hover:text-primary-foreground"
+                      className="justify-start w-full transition-all duration-300 bg-transparent hover:bg-[#059669] hover:text-primary-foreground"
                       asChild
                     >
                       <a
@@ -668,7 +733,7 @@ export default function ProjectDetailsPage() {
             <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button
                 size="lg"
-                className="transition-all duration-300 bg-primary hover:bg-primary/90 text-primary-foreground hover:scale-105"
+                className="transition-all duration-300 bg-[#059669] hover:bg-[#059669]/90 text-primary-foreground hover:scale-105"
                 asChild
               >
                 <Link href="/contact">Get In Touch</Link>
