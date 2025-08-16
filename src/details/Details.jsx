@@ -1,5 +1,6 @@
+import { motion, useInView } from "framer-motion";
 
-import { useState, useEffect } from "react";
+import {  useEffect, useRef } from "react";
 import {
   ArrowLeft,
   ExternalLink,
@@ -16,18 +17,50 @@ import { Badge } from "@/components/ui/badge";
 import { Link, useLoaderData } from "react-router-dom";
 
 export default function ProjectDetailsPage() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [activeImage, setActiveImage] = useState(0);
+  const refHero = useRef(null);
+  const refImage = useRef(null);
+  const refOverview = useRef(null);
+  const refFeatures = useRef(null);
+  const refChallenges = useRef(null);
+  const refSidebar = useRef(null);
+
+  const inViewHero = useInView(refHero, {
+    margin: "0px 0px -100px 0px",
+    once: false,
+  });
+  const inViewImage = useInView(refImage, {
+    margin: "0px 0px -100px 0px",
+    once: false,
+  });
+  const inViewOverview = useInView(refOverview, {
+    margin: "0px 0px -100px 0px",
+    once: false,
+  });
+  const inViewFeatures = useInView(refFeatures, {
+    margin: "0px 0px -100px 0px",
+    once: false,
+  });
+  const inViewChallenges = useInView(refChallenges, {
+    margin: "0px 0px -100px 0px",
+    once: false,
+  });
+  const inViewSidebar = useInView(refSidebar, {
+    margin: "0px 0px -100px 0px",
+    once: false,
+  });
 
   const projectData = useLoaderData();
   console.log(projectData);
 
   useEffect(() => {
-    setIsVisible(true);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className=" bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-sm border-border">
         <div className="container px-4 py-4 mx-auto">
@@ -42,10 +75,11 @@ export default function ProjectDetailsPage() {
       </header>
 
       {/* Hero Section */}
-      <section
-        className={`py-12 transition-all duration-1000 ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-        }`}
+      <motion.div
+        ref={refHero}
+        initial={{ opacity: 0, y: 100 }}
+        animate={inViewHero ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto text-center">
@@ -124,22 +158,28 @@ export default function ProjectDetailsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Project Images */}
-      <section className="py-12 bg-muted/30">
+      <motion.div
+        ref={refImage}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={inViewImage ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="py-12 bg-muted/30"
+      >
         <div className="container px-4 mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="relative mb-8">
               <img
                 src={projectData.image || "/placeholder.svg"}
-                alt={`${projectData.image} screenshot ${activeImage + 1}`}
+                alt={`${projectData.image}`}
                 className="w-full h-[400px] object-cover rounded-lg shadow-2xl transition-all duration-500"
               />
             </div>
           </div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Project Details */}
       <section className="py-16">
@@ -149,24 +189,32 @@ export default function ProjectDetailsPage() {
               {/* Main Content */}
               <div className="space-y-8 md:col-span-2">
                 {/* Overview */}
-                <Card className="animate-fade-in-up bg-[#f1f5f9]">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <Code className="w-5 h-5 text-[#059669]" />
-                      Project Overview
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="mb-4 leading-relaxed text-muted-foreground">
-                      {projectData.description}
-                    </p>
-                    <p className="leading-relaxed text-muted-foreground">
-                      {projectData.conclusion}
-                    </p>
-                  </CardContent>
-                </Card>
+                <motion.div
+                  ref={refOverview}
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={inViewOverview ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                  <Card className="animate-fade-in-up bg-[#f1f5f9]">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <Code className="w-5 h-5 text-[#059669]" />
+                        Project Overview
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="mb-4 leading-relaxed text-muted-foreground">
+                        {projectData.description}
+                      </p>
+                      <p className="leading-relaxed text-muted-foreground">
+                        {projectData.conclusion}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
 
                 {/* Features */}
+
                 <Card className="animate-fade-in-up animation-delay-200 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle>Key Features</CardTitle>
@@ -253,6 +301,7 @@ export default function ProjectDetailsPage() {
                 </Card>
 
                 {/* Challenges & Solutions */}
+
                 <Card className="animate-fade-in-up animation-delay-400 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle>Challenges & Solutions</CardTitle>
@@ -296,6 +345,7 @@ export default function ProjectDetailsPage() {
               {/* Sidebar */}
               <div className="space-y-6">
                 {/* Technologies */}
+
                 <Card className="animate-fade-in-up animation-delay-300 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle className="text-lg">Technologies Used</CardTitle>
@@ -316,6 +366,7 @@ export default function ProjectDetailsPage() {
                 </Card>
 
                 {/* Quick Links */}
+
                 <Card className="animate-fade-in-up animation-delay-500 bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle className="text-lg">Quick Links</CardTitle>
