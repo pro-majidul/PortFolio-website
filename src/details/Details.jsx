@@ -523,79 +523,81 @@ export default function ProjectDetailsPage() {
                   </CardHeader>
                   <CardContent>
                     <ul className="space-y-3">
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.user_roles.admin_role}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.user_roles.employee_role}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
-                         {projectData.features.user_roles.hr_role}
+                          {projectData.features.user_roles.hr_role}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.user_roles.admin_role}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
-                         {projectData.features.employee_panel.performance_reports}
+                          {
+                            projectData.features.employee_panel
+                              .performance_reports
+                          }
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.employee_panel.salary_info}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.hr_panel.employee_list}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.hr_panel.salary_payment}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.hr_panel.attendance_tracking}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.admin_panel.dashboard}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
                           {projectData.features.admin_panel.employee_management}
                         </span>
                       </li>
-                      <li  className="flex items-start gap-3">
+                      <li className="flex items-start gap-3">
                         <div className="flex-shrink-0 w-2 h-2 mt-2 rounded-full bg-[#059669]" />
                         <span className="text-muted-foreground">
-                         {projectData.features.admin_panel.salary_approval}
+                          {projectData.features.admin_panel.salary_approval}
                         </span>
                       </li>
-                      
                     </ul>
                   </CardContent>
                 </Card>
@@ -642,13 +644,13 @@ export default function ProjectDetailsPage() {
               {/* Sidebar */}
               <div className="space-y-6">
                 {/* Technologies */}
-                {/* <Card className="animate-fade-in-up animation-delay-300">
+                <Card className="animate-fade-in-up animation-delay-300">
                   <CardHeader>
                     <CardTitle className="text-lg">Technologies Used</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
-                      {projectData.technologies.map((tech, index) => (
+                      {projectData.technology.map((tech, index) => (
                         <Badge
                           key={index}
                           variant="secondary"
@@ -659,7 +661,7 @@ export default function ProjectDetailsPage() {
                       ))}
                     </div>
                   </CardContent>
-                </Card> */}
+                </Card>
 
                 {/* Quick Links */}
                 {/* <Card className="animate-fade-in-up animation-delay-500">
