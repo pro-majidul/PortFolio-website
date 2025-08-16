@@ -1,75 +1,96 @@
-import React from "react";
 import { motion } from "framer-motion";
+import { GraduationCap, Calendar } from "lucide-react";
 import { TextShimmerWave } from "./ui/TextShimmerWave";
-import { TextEffect } from "./ui/TextEffect";
-
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 const Education = () => {
-    const containerVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.8, staggerChildren: 0.2 },
-        },
-    };
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: "-50px", once: false });
+  const educationData = [
+    {
+      degree: "Diploma in Computer Science & Technology",
+      institution: "Rangpur Polytechnic Institute",
+      duration: "2021 – 2025",
+      result: "CGPA: 3.65 / 4.00",
+      majorSubjects: [
+        "Web Development",
+        "Database Management System (DBMS)",
+        "Programming Languages: Python, Java",
+        "Data Structures & Algorithms",
+        "Computer Networking",
+        "Operating Systems",
+        "Microcontroller / IoT Systems",
+        "Cyber Security & Ethics",
+        "Software Engineering / Project Work",
+      ],
+    },
+  ];
 
-    const itemVariants = {
-        hidden: { opacity: 0, x: -30 },
-        visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
-    };
+  return (
+    <section
+      id="education"
+      className="py-16"
+      style={{ backgroundColor: "#0A101E", fontFamily: "Railway" }}
+    >
+      <div className="max-w-4xl px-6 mx-auto">
+        <h2 className="mb-10 text-2xl font-bold text-center md:my-10 md:pb-10 md:text-4xl">
+          {" "}
+          <TextShimmerWave>Education </TextShimmerWave>
+        </h2>
 
-    return (
-        <section id="education" className='md:my-10 md:py-10 my-3 py-3 max-w-7xl w-full mx-auto text-gray-300' >
-            <div
-                className="w-full mx-auto px-3 md:px-10 text-center"
-
+        <div className="relative pl-6 space-y-12 border-l-4 border-indigo-500">
+          {educationData.map((edu, index) => (
+            <motion.div
+              ref={ref}
+              initial={{ opacity: 0, x: -50 }}
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+              transition={{ duration: 0.9, ease: "easeOut" }}
+              className="relative"
             >
-                <h2 className="text-2xl text-center  md:my-10 md:pb-10 md:text-4xl font-bold  mb-10">  <TextShimmerWave>Educational Qualification</TextShimmerWave></h2>
-                <p className="mt-4 text-lg">
-                    My academic background and educational journey.
+              {/* Timeline Dot */}
+              <div className="absolute -left-[30px] top-2 w-6 h-6 rounded-full bg-indigo-500 border-4 border-[#0A101E]"></div>
+
+              {/* Card */}
+              <div className="bg-[#111827] dark:bg-gray-800 shadow-lg shadow-indigo-900/30 rounded-xl p-6 hover:shadow-2xl transition duration-500">
+                <div className="flex items-center gap-3 mb-2">
+                  <GraduationCap className="w-20 h-20 text-indigo-400 md:h-8 md:w-8" />
+                  <h3 className="text-xl font-semibold text-white md:text-3xl">
+                    {edu.degree}
+                  </h3>
+                </div>
+
+                <p className="text-xl text-gray-300 md:text-2xl">
+                  {edu.institution}
                 </p>
 
-                {/* <div className=" w-full h-[400px] ">
-                    <img className="w-full h-full object-contain " src="https://i.ibb.co/JwqJKDyj/campus.webp" alt="" />
-                </div> */}
-                <div
+                <p className="flex items-center gap-2 mt-2 text-lg text-gray-400 md:text-xl">
+                  <Calendar className="w-4 h-4 text-green-400" /> {edu.duration}
+                </p>
 
-                    className="mt-10 flex flex-col  gap-8 md:flex-row md:justify-between"
-                >
-                    <div className="bg-[#101624] w-full  p-6 rounded-lg shadow-md hover:shadow-xl">
-                        <h3 className="text-2xl font-semibold text-orange-300">
-                            <TextEffect>Rangpur Polytechnic Institute</TextEffect>
-                        </h3>
-                        <p className="mt-2 text-gray-400">
-                            <strong>Department:</strong> Computer Technology
-                        </p>
-                        <p className="mt-1 text-gray-400">
-                            <strong>Session:</strong> 2021-2022
-                        </p>
-                        <p className="mt-1 text-gray-400">
-                            <strong>Current Semester:</strong> 7th Semester
-                        </p>
-                    </div>
+                <p className="mt-2 text-gray-400">
+                  📊{" "}
+                  <span className="text-lg font-medium text-white md:text-xl">
+                    {edu.result}
+                  </span>
+                </p>
 
-                    <div
-
-                        className="flex items-center justify-center bg-[#101624] p-6 rounded-lg shadow-md hover:shadow-xl"
-                    >
-                        <p className="text-xl font-medium text-gray-400 z-[1]">
-                            <TextEffect>
-                                Currently pursuing a diploma in Computer Technology at the esteemed Rangpur Polytechnic Institute.
-                                This journey has allowed me to develop a deep understanding of modern programming paradigms,
-                                software development methodologies, and hands-on technical expertise.
-                                The comprehensive curriculum, paired with practical projects and industry-oriented training,
-                                has equipped me with the skills to tackle real-world challenges in the field of technology.
-                                My passion lies in exploring cutting-edge technologies and applying them to solve problems effectively,
-                                preparing myself for a rewarding career in the tech industry.</TextEffect>
-                        </p>
-                    </div>
+                <div className="mt-4">
+                  <h4 className="mb-2 text-lg font-semibold text-white md:text-xl">
+                    📝 Major Subjects:
+                  </h4>
+                  <ul className="space-y-1 text-gray-300 list-disc list-inside">
+                    {edu.majorSubjects.map((subject, i) => (
+                      <li key={i}>{subject}</li>
+                    ))}
+                  </ul>
                 </div>
-            </div>
-        </section>
-    );
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Education;
