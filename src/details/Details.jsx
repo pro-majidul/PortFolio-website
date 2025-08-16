@@ -499,10 +499,10 @@ export default function ProjectDetailsPage() {
               {/* Main Content */}
               <div className="space-y-8 md:col-span-2">
                 {/* Overview */}
-                {/* <Card className="animate-fade-in-up">
+                <Card className="animate-fade-in-up bg-[#f1f5f9]">
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
-                      <Code className="w-5 h-5 text-primary" />
+                      <Code className="w-5 h-5 text-[#059669]" />
                       Project Overview
                     </CardTitle>
                   </CardHeader>
@@ -511,10 +511,10 @@ export default function ProjectDetailsPage() {
                       {projectData.description}
                     </p>
                     <p className="leading-relaxed text-muted-foreground">
-                      {projectData.longDescription}
+                      {projectData.conclusion}
                     </p>
                   </CardContent>
-                </Card> */}
+                </Card>
 
                 {/* Features */}
                 {/* <Card className="animate-fade-in-up animation-delay-200">
